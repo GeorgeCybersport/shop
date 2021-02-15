@@ -1,0 +1,46 @@
+.new_arrival{
+  /* Style for "Rectangle" */
+  background-color: #f8f3f4;
+  height: 148px;
+  &>.container{
+    height: 148px;
+    @include block-position(center, space-between);
+    &>div:first-child{
+      /* Style for "New Arriva" */
+      color: $pink;
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}
+.nav_arrival{
+  display: flex;
+  div{
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #636363;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  a{
+    &:hover{
+      border-bottom: 1px solid #636363;
+    }
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #636363;
+    &:last-child{
+      color: $pink;
+      font-weight: 700;
+      &:hover{
+        border-bottom: 1px solid $pink;
+      }
+    }
+  }
+  &:hover{
+    padding-top: 1px;
+  }
+}

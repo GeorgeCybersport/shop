@@ -1,0 +1,52 @@
+$fileWidth: 1140px;
+$pink: #f16d7f;
+$black-words: #222222;
+$white: #fff;
+$greyBorder: #e6e6e6;
+$shoppingBorder: #eaeaea;
+$oneMoreBlack: #2f2f2f;
+$addInf: #b3b2b2;
+$starColor: #ff0d0d;
+$dropborder: #e8e8e8;
+$sideLinks: #6f6e6e;
+
+@mixin block-position($align: start, $justify: center){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+@mixin ofer{
+	border: none;
+    outline: none;
+}
+@mixin size($height, $width){
+	height: $height;
+	width: $width;
+}
+@mixin hover($color){
+	background-color: darken($color, 5%);
+}
+.button-style{
+  background-color: $white;
+  border: 1px solid $shoppingBorder;
+  color: #4a4a4a;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  &:hover{
+    @include hover($white);
+  }
+}
+.input-style{
+  padding: 0px 12px;
+  border: 1px solid $shoppingBorder;
+  background-color: $white;
+  cursor: pointer;
+  &::placeholder{
+  color: #bcbcbc;
+  }
+  &:focus{
+    cursor: text;
+  }
+}

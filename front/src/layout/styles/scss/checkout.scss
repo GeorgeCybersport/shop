@@ -1,0 +1,137 @@
+@import "imports";
+.checkout{
+  margin-top: 59px;
+}
+.checkout-dropdown{
+  margin-top: 30px;
+  display: none;
+  margin-bottom: 79px;
+  div:first-child{
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .checkout-box{
+    margin: 35px;
+    display: flex;
+    justify-content: space-between;
+    div {
+      &:first-child {
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      &:nth-child(2){
+        margin-top: 15px;
+        color: $addInf;
+        font-size: 13px;
+        font-weight: 400;
+        margin-bottom: 13px;
+      }
+    }
+  }
+}
+.registr-info{
+  div{
+    &:nth-child(5){
+      margin-top: 33px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    &:nth-child(6){
+      margin-top: 15px;
+      color: $addInf;
+      font-size: 13px;
+      font-weight: 400;
+      margin-bottom: 33px;
+    }
+    &:nth-child(7),
+    &:nth-child(8){
+      color: $addInf;
+      font-size: 13px;
+      font-weight: 400;
+      margin-top: 15px;
+    }
+  }
+  button{
+    margin-top: 38px;
+    @extend .button-style;
+    @include size(50px, 188px);
+  }
+  p{
+    input[type="radio"]{
+      cursor: pointer;
+      margin-right: 14px;
+      color: #000000;
+      &:checked{
+        color: #000000;
+        background-color: #000;
+      }
+    }
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: block;
+    margin-left: -3px;
+    height: 11px;
+    &:first-child {
+      margin-top: 33px;
+    }
+    &:last-child{
+      margin-top: 20px;
+    }
+  }
+}
+.account-enter{
+  div{
+    &:nth-child(3),
+    &:nth-child(5){
+      margin-top: 23px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+      text-transform: uppercase;
+    }
+    &:nth-child(7){
+      margin-top: 12px;
+      color: $starColor;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+  }
+  input{
+    @extend .input-style;
+    @include size(45px, 366px);
+    margin-top: 10px;
+  }
+  button{
+    @extend .button-style;
+    @include size(50px, 180px);
+    margin-top: 32px;
+    margin-right: 32px;
+  }
+  a{
+    color: $black-words;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    &:hover{
+      color: $pink;
+    }
+  }
+}
+.checkout-button{
+  @include size(72px, 100%);
+  border-top: none;
+  &:first-child{
+    border-top: 1px solid $dropborder;
+  }
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid $dropborder;
+  background-color: $white;
+  cursor: pointer;
+  outline: none;
+}

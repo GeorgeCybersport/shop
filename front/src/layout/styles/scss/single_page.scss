@@ -1,0 +1,341 @@
+@import "imports";
+.container {
+  width: $fileWidth;
+  margin: auto;
+}
+.single-content{
+  position: relative;
+  height: 1521px;
+  .arrow-left, .arrow-right{
+    cursor: pointer;
+  }
+}
+.slider{
+  @include block-position(center, space-between);
+  @include size(777px, 100%);
+  z-index: 1;
+  background-color: #f7f7f7;
+  .slider-content img{
+    @include size(724px, 597px);
+  }
+}
+.slider-line{
+  margin-bottom: 18px;
+  .dot{
+    @include size(1px, 42px);
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    margin-left: -3px;
+    background-color: $shoppingBorder;
+  }
+  .active{
+    background-color: #ef5b70;
+    @include size(3px, 63px);
+  }
+}
+.like{
+  margin-top: 112px;
+  .container>div:first-child{
+    /* Style for "you may li" */
+    text-align: center;
+    color: #4d4d4d;
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+}
+.like-content{
+  @include block-position(center, space-between);
+  height: 508px;
+  .f-items{
+    margin: 0;
+    padding: 0;
+    >.container{
+      padding-top: 100px;
+      h2{
+        color: $black-words;
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 0.75px;
+        text-align: center;
+        margin: 0;
+      }
+      >p{
+        color: #9f9f9f;
+        font-size: 14px;
+        font-weight: 400;
+        /* Text style for "S, hop for" */
+        letter-spacing: 0.35px;
+        text-align: center;
+        margin-top: 16px;
+        display: block;
+      }
+    }
+  }
+  .f-blocks{
+    flex-wrap: wrap;
+    @include block-position(space-between, space-between);
+  }
+  .f-content{
+    margin-top: 59px;
+    position: relative;
+    a>img{
+      background-color: #e9e9e9;
+      @include size(279px, 261px);
+    }
+  }
+  .f-textbox a{
+    display: block;
+    padding-top: 15px;
+    margin-top: -15px;
+    @include size(70px, 100%);
+    text-decoration: none;
+    >p{
+      &:first-child{
+        color: $black-words;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+      &:last-child{
+        color: $pink;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .f-content:hover{
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+  }
+  .shadow{
+    @include size(354px, 261px);
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    z-index: 2;
+    &:hover{
+      opacity: 0.85;
+    }
+    a{
+      display: block;
+      @include size(354px, 261px);
+    }
+    button{
+      cursor: pointer;
+      @include size(39px, 123px);
+      border: 1px solid $white;
+      color: $white;
+      font-size: 13px;
+      font-weight: 400;
+      background-color: #3a3838;
+      vertical-align: middle;
+      margin-top: 98px;
+      margin-left: 70px;
+      position: relative;
+    }
+    img{
+      @include size(22px, 23px);
+      position: absolute;
+      top:10px;
+      left: 12px;
+    }
+    p{
+      margin-left: 28px;
+    }
+  }
+  .shadow_box{
+    background-color: #3a3838;
+    @include size(279px, 261px);
+  }
+  .visible{
+    z-index: 1;
+  }
+}
+.product-buy {
+  position: absolute;
+  top: 711px;
+  width: 100%;
+  z-index: 2;
+
+  >.container {
+    border: 1px solid $shoppingBorder;
+    background-color: #fff;
+  }
+}
+  .product-buy-textbox{
+    margin: auto;
+    width: 618px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .product-buy-text{
+      margin-top: 73px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 1px solid #eaeaea;
+      >div {
+        &:first-child {
+          /* Style for "WOMEN COLL" */
+          color: $pink;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 24px;
+          text-transform: uppercase;
+          margin-bottom: 14px;
+        }
+
+        &:nth-child(3) {
+          /* Style for "Moschino C" */
+          color: #4d4d4d;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 24px;
+          text-transform: uppercase;
+          margin-bottom: 67px;
+        }
+
+        &:nth-child(4) {
+          /* Style for "Compelling" */
+          color: #5e5e5e;
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 24px;
+          text-align: center;
+        }
+
+        &:nth-child(5) {
+          margin-top: 28px;
+          margin-bottom: 37px;
+          display: flex;
+          justify-content: center;
+          color: #b9b9b9;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 24px;
+          text-transform: uppercase;
+          div:first-child{
+            margin-right: 44px;
+          }
+          span {
+            color: $oneMoreBlack;
+          }
+        }
+
+        &:nth-child(6) {
+          /* Style for "$561" */
+          color: #ef5b70;
+          font-size: 24px;
+          font-weight: 700;
+          margin-bottom: 43px;
+        }
+      }
+    }
+  }
+  .chooser{
+    margin-top: 63px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    >div{
+      color: $oneMoreBlack;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 24px;
+      text-transform: uppercase;
+      select, input{
+        cursor: pointer;
+        padding-left: 12px;
+        @include size(35px, 132px);
+        border: 1px solid $shoppingBorder;
+        background-color: $white;
+      }
+      input:focus{
+        cursor: text;
+      }
+      input::placeholder{
+        color: #bcbcbc;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+    }
+  }
+  .color{
+    .color-dropdown div, .color-button div {
+      border: 1px solid black;
+      margin-right: 12px; }
+    .color1{
+      background-color: red;
+      @include size(12px, 12px);
+    }
+    .color-button{
+      color: #bcbcbc;
+    }
+    .color-dropdown{
+      display: none;
+      position: absolute;
+      z-index: 2;
+    }
+    .red{
+      @include size(12px, 12px);
+      background-color: red;
+    }
+    .green{
+      @include size(12px, 12px);
+      background-color: green;
+    }
+    .blue{
+      @include size(12px, 12px);
+      background-color: blue;
+    }
+    .black{
+      @include size(12px, 12px);
+      background-color: black;
+    }
+    .white{
+      @include size(12px, 12px);
+      background-color: $white;
+    }
+    button{
+      cursor: pointer;
+      display: flex;
+      outline: none;
+      cursor: pointer;
+      align-items: center;
+      padding-left: 12px;
+      @include size(35px, 132px);
+      border: 1px solid $shoppingBorder;
+      background-color: $white;
+      i{
+        margin-left: 50px;
+      }
+    }
+  }
+
+  .buy_button{
+    cursor: pointer;
+    margin-top: 28px;
+    width: 537px;
+    height: 55px;
+    border: 1px solid #ef5b70;
+    background-color: $white;
+    color: #ef5b70;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 122px;
+    img{
+      margin-right: 15px;
+    }
+    &:hover{
+      @include hover($white);
+    }
+  }
+
+

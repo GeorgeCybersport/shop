@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;800;900&display=swap');
+@import "variables";
+@import "arrival";
+@import "header";
+@import "footer";
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $black-words;
+  font-family: 'Lato', sans-serif;
+}
+a{
+  text-decoration: none;
+}
+.container {
+  max-width: $fileWidth;
+  margin: auto;
+}
