@@ -1,0 +1,383 @@
+@import "variables";
+
+.header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  .dropdown {
+    //display: block;
+    top: 60px;
+    .dropdown-container {
+      @include size(490px, 222px);
+      padding: 0px 20px 20px 20px;
+      z-index: 2;
+    }
+    &.active {
+      display: block;
+    }
+  }
+  .header-first-part {
+    display: flex;
+    vertical-align: center;
+    div {
+      margin-top: 5px;
+    }
+  }
+}
+.input-dropdown {
+  display: none;
+  border-radius: 10px;
+  padding: 0px 20px 20px 20px;
+  position: absolute;
+  right: 500px;
+  width: 200px;
+  z-index: 2;
+  border: 1px solid $greyBorder;
+  top: 75px;
+  background-color: $white;
+  &.active {
+    display: block;
+  }
+  a {
+    display: block;
+    font-size: 14px;
+    padding: 5px;
+    color: $black-words;
+  }
+}
+.logo {
+  display: block;
+  background: url(https://raw.githubusercontent.com/GeorgeCybersport/JavaScript-Basic/master/logo.png)
+    no-repeat;
+  background-blend-mode: overlay;
+  padding-left: 72px;
+  font-size: 27px;
+  width: 165px;
+  line-height: 51px;
+  text-transform: uppercase;
+  color: $black-words;
+  font-weight: 300;
+  box-sizing: border-box;
+}
+
+.logo span {
+  color: $pink;
+  font-weight: 700;
+}
+
+.search {
+  margin-left: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  border: 1px solid $greyBorder;
+  overflow: hidden;
+  font-size: 14px;
+  input {
+    cursor: pointer;
+    height: inherit;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    padding: 14px 16px;
+    border-left: 1px solid $greyBorder;
+    border-right: 1px solid $greyBorder;
+    &:focus {
+      cursor: text;
+    }
+  }
+  button:last-child {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    height: inherit;
+    background: none;
+    padding: 12px;
+    color: #a4a4a4;
+    &:hover {
+      @include hover(#fff);
+    }
+  }
+}
+
+.search__browse {
+  cursor: pointer;
+  padding: 14px;
+  background-color: #f9f9f9;
+  line-height: 38px;
+  border: none;
+  color: #7c7c7c;
+  outline: none;
+  i {
+    color: #838383;
+    margin-left: 4px;
+  }
+  &:hover {
+    @include hover(#f9f9f9);
+  }
+}
+
+.header__cart {
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 26px;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.header__account-bar {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  width: 130px;
+  line-height: 38px;
+  background-color: $pink;
+  padding-left: 11px;
+  color: $white;
+  font-size: 15px;
+  font-weight: 400;
+  i {
+    margin-left: 4px;
+    color: $white;
+    font-size: 14px;
+  }
+  &:hover {
+    @include hover($pink);
+  }
+}
+.account-block {
+  display: flex;
+  align-items: center;
+}
+.dropdown-buy {
+  border-radius: 5px;
+  background-color: $white;
+  padding: 20px;
+  position: absolute;
+  top: 73px;
+  z-index: 2;
+  border: 1px solid $shoppingBorder;
+  .total-drop-textbox {
+    display: flex;
+    justify-content: space-between;
+    color: $black-words;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  img {
+    @include size(75px, 60px);
+  }
+  .product-drop {
+    padding-bottom: 16px;
+    border-bottom: 1px solid $shoppingBorder;
+    display: flex;
+    justify-content: space-between;
+    .product-drop-textbox {
+      display: inline-block;
+      margin-left: 15px;
+      vertical-align: top;
+      margin-top: 10px;
+      div {
+        &:first-child {
+          color: $black-words;
+          font-size: 12px;
+          font-weight: 900;
+          text-transform: uppercase;
+        }
+
+        &:last-child {
+          margin-top: 34px;
+          color: $pink;
+          font-size: 12px;
+          font-weight: 400;
+          text-transform: uppercase;
+
+          span {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+    .action {
+      width: 30px;
+      @include block-position(center, flex-end);
+      font-size: 16px;
+      font-weight: 400;
+      i {
+        color: #c0c0c0;
+        &:hover {
+          color: darken(#c0c0c0, 15%);
+        }
+      }
+    }
+  }
+  .total-price-drop {
+    margin-top: 19px;
+    button {
+      cursor: pointer;
+      background-color: $white;
+      @include size(50px, 225px);
+      &:hover {
+        @include hover($white);
+      }
+      &:nth-child(2) {
+        margin-top: 32px;
+        border: 1px solid $pink;
+        color: $pink;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      &:last-child {
+        margin-top: 11px;
+        border: 1px solid $shoppingBorder;
+        color: #4a4a4a;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+.dropdown-profile {
+  border-radius: 5px;
+  background-color: $white;
+  padding: 20px;
+  position: absolute;
+  top: 73px;
+  z-index: 2;
+  border: 1px solid $shoppingBorder;
+  .profile-name {
+    display: flex;
+    justify-content: space-between;
+    div {
+      color: $black-words;
+      font-size: 16px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+  }
+  button {
+    cursor: pointer;
+    background-color: $white;
+    @include size(50px, 225px);
+    &:hover {
+      @include hover($white);
+    }
+    &:nth-child(2) {
+      margin-top: 32px;
+      border: 1px solid $pink;
+      color: $pink;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    &:last-child {
+      margin-top: 11px;
+      border: 1px solid $shoppingBorder;
+      color: #4a4a4a;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.headerLine {
+  border-bottom: 1px solid #ececec;
+}
+.topNav {
+  position: relative;
+  height: 51px;
+  font-weight: 700;
+  font-size: 14px;
+  @include block-position(center, center);
+  > div:first-child {
+    > a {
+      text-transform: uppercase;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-right: 46px;
+      color: $black-words;
+      &:hover {
+        color: $pink;
+      }
+    }
+  }
+  > div:not(:first-child) {
+    &:hover > div {
+      display: block;
+    }
+    > a {
+      text-transform: uppercase;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $black-words;
+      &:hover {
+        color: $pink;
+      }
+      &:not(:last-child) {
+        margin-right: 46px;
+      }
+    }
+  }
+  div:nth-child(5),
+  div:nth-child(6),
+  div:nth-child(7) {
+    .dropdown {
+      right: 0px;
+    }
+  }
+}
+.nav-block > div {
+  top: 43px;
+  > .dropdown-container {
+    @include size(310px, 846px);
+  }
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  .dropdown-container {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid $shoppingBorder;
+    background-color: $white;
+    border-radius: 5px;
+    img {
+      margin-top: 22px;
+    }
+    > div {
+      width: 235px;
+
+      > div {
+        margin-top: 13px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid $shoppingBorder;
+        width: 100%;
+      }
+
+      a {
+        display: block;
+        color: #646464;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0.35px;
+
+        &:hover {
+          color: $pink;
+        }
+      }
+    }
+  }
+}

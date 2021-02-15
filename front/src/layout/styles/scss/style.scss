@@ -1,0 +1,340 @@
+@import "imports";
+.topPicture {
+  @include size(614px, 100%);
+  background-color: #e8e8e8;
+  > .container {
+    background: url(https://raw.githubusercontent.com/GeorgeCybersport/JavaScript-Basic/master/topHeaderBack.png)
+      no-repeat;
+    background-blend-mode: overlay;
+    height: 405px;
+    background-position: top right;
+    padding-top: 209px;
+    display: flex;
+  }
+}
+.auth {
+  display: flex;
+  justify-content: space-around;
+}
+.authField {
+  button {
+    cursor: pointer;
+    background-color: $white;
+    @include size(50px, 225px);
+    &:hover {
+      @include hover($white);
+    }
+    margin-top: 32px;
+    border: 1px solid $pink;
+    color: $pink;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  input {
+    display: block;
+    cursor: pointer;
+    &:focus {
+      cursor: text;
+    }
+    margin-top: 22px;
+    padding-left: 18px;
+    @include size(45px, 337px);
+    border: 1px solid $shoppingBorder;
+    color: $black-words;
+    font-size: 13px;
+    font-weight: 300;
+    &::-webkit-input-placeholder {
+      color: #b1b1b1;
+    }
+    &::-ms-input-placeholder {
+      color: #b1b1b1;
+    }
+  }
+}
+.topPictureText {
+  margin-left: 12px;
+  height: 922px;
+  > h1 {
+    color: $black-words;
+    font-weight: 700;
+    text-transform: uppercase;
+    &:first-child {
+      font-size: 60px;
+      letter-spacing: 1.5px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+    &:last-child {
+      letter-spacing: 1px;
+      font-size: 40px;
+      margin-top: 0px;
+    }
+    > span {
+      color: $pink;
+    }
+  }
+}
+.topPicture_line {
+  background-color: $pink;
+  height: 95px;
+  width: 12px;
+  vertical-align: middle;
+  margin-top: 15px;
+}
+.hot-deal {
+  > .container {
+    padding-top: 98px;
+    @include block-position(space-between, space-between);
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 823px;
+  }
+}
+.hot-deal-content {
+  position: relative;
+}
+.hd-textbox {
+  position: absolute;
+  background-color: $white;
+  padding: 16px 19px;
+  top: 26px;
+  p {
+    color: $black-words;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.45px;
+    margin: 0px;
+  }
+  h2 {
+    color: $pink;
+    font-size: 30px;
+    letter-spacing: 0.75px;
+    margin: 0px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+.f-items {
+  margin: 0;
+  padding: 0;
+  > .container {
+    padding-top: 100px;
+    h2 {
+      color: $black-words;
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: 0.75px;
+      text-align: center;
+      margin: 0;
+    }
+    > p {
+      color: #9f9f9f;
+      font-size: 14px;
+      font-weight: 400;
+      /* Text style for "S, hop for" */
+      letter-spacing: 0.35px;
+      text-align: center;
+      margin-top: 16px;
+      display: block;
+    }
+  }
+}
+.f-blocks {
+  flex-wrap: wrap;
+  @include block-position(space-between, space-between);
+}
+.f-content {
+  margin-top: 59px;
+  position: relative;
+  img {
+    @include size(279px, 261px);
+  }
+}
+.f-textbox a {
+  display: block;
+  padding-top: 15px;
+  margin-top: -15px;
+  @include size(70px, 100%);
+  text-decoration: none;
+  > p {
+    &:first-child {
+      color: $black-words;
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    &:last-child {
+      color: $pink;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}
+.f-content:hover {
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+}
+.shadow {
+  @include size(354px, 261px);
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  z-index: 2;
+  &:hover {
+    opacity: 0.85;
+  }
+  a {
+    display: block;
+    @include size(354px, 261px);
+  }
+  button {
+    @include size(39px, 123px);
+    border: 1px solid $white;
+    color: $white;
+    font-size: 13px;
+    font-weight: 400;
+    background-color: #3a3838;
+    vertical-align: middle;
+    margin-top: 98px;
+    margin-left: 70px;
+    position: relative;
+  }
+  img {
+    @include size(22px, 23px);
+    position: absolute;
+    top: 10px;
+    left: 12px;
+  }
+  p {
+    margin-left: 28px;
+  }
+}
+.shadow_box {
+  background-color: #3a3838;
+  @include size(279px, 261px);
+}
+.visible {
+  z-index: 1;
+}
+.browse {
+  cursor: pointer;
+  @include size(48px, 212px);
+  background-color: $pink;
+  color: #fdecee;
+  line-height: 48px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-align: left;
+  padding-left: 18px;
+  margin-top: 100px;
+  margin-left: 42%;
+  border: none;
+  i {
+    margin-left: 9px;
+  }
+  &:hover {
+    @include hover($pink);
+  }
+}
+.offer {
+  margin-top: 113px;
+  height: 529px;
+  & > .container {
+    display: flex;
+  }
+}
+.offer-textbox {
+  background-image: url(https://raw.githubusercontent.com/GeorgeCybersport/JavaScript-Basic/master/Image.png);
+  @include size(383px, 767px);
+  padding-top: 146px;
+  padding-left: 39px;
+  h1 {
+    margin-top: -15px;
+    padding-top: 0px;
+    color: $white;
+    font-size: 54px;
+    font-weight: 700;
+    text-transform: uppercase;
+    /* Text style for "3, 0%" */
+    letter-spacing: 1.5px;
+    margin-bottom: 0px;
+    span {
+      color: $pink;
+      letter-spacing: 1.5px;
+      font-size: 54px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+  h2 {
+    margin-top: 0px;
+    padding-top: 0px;
+    font-size: 32px;
+    letter-spacing: 0.9px;
+    color: $white;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+}
+.offer-blocks {
+  background-color: #222224;
+  @include size(529px, 373px);
+}
+.offer-content {
+  width: 373px;
+  padding-left: 36px;
+  padding-right: 43px;
+  display: flex;
+  margin-top: -25px;
+  &:nth-child(1) {
+    .content-textbox {
+      margin-left: 34px;
+      margin-top: 55px;
+    }
+    img {
+      margin-top: -30px;
+    }
+  }
+  &:nth-child(2) {
+    .content-textbox {
+      margin-left: 38px;
+      margin-top: 37px;
+    }
+    img {
+      margin-top: -40px;
+    }
+  }
+  &:nth-child(3) {
+    .content-textbox {
+      margin-left: 32px;
+      margin-top: 36px;
+    }
+    img {
+      margin-top: -50px;
+    }
+  }
+}
+.content-textbox {
+  width: 219px;
+  h3 {
+    color: #fbfbfb;
+    font-size: 20px;
+    font-weight: 700;
+    /* Text style for "Free Deliv" */
+    letter-spacing: 0.5px;
+    margin-bottom: 0px;
+  }
+  p {
+    margin-top: 17px;
+    color: #fbfbfb;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    /* Text style for "W, orldwid" */
+    letter-spacing: 0.35px;
+  }
+}
